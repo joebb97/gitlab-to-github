@@ -47,7 +47,6 @@ def create_repos(dry_run):
         )
         if not resp.ok:
             print('bad status', resp.status_code, resp.json())
-
         
         time.sleep(1)
 
@@ -95,8 +94,6 @@ def filter_gitlab_branches(lines):
         if len(split) == 1:
             continue
         gitlab_branches.append(split[1])
-
-    # 'remotes/origin/asdf/dev'.split('remotes/origin/')
 
     return gitlab_branches
 
